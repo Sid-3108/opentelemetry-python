@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checking out the source code'
+                checkout scm
             }
         } 
         stage('Sanity Test') {
