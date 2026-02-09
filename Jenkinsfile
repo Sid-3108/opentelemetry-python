@@ -1,5 +1,9 @@
 pipeline {
-    agent any //this could be docker agent or kubernetes agent or anything
+    agent {
+        docker {
+            image 'python:3.11-slim'
+        }
+    }
 
     stages {
         stage('Checkout') {
