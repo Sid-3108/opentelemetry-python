@@ -1,5 +1,5 @@
 pipeline {
-    agent any #this could be docker agent or kubernetes agent or anything
+    agent any //this could be docker agent or kubernetes agent or anything
 
     stages {
         stage('Checkout') {
