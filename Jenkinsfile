@@ -22,6 +22,20 @@ pipeline {
             }
         }
 
+        stage('Verify Service level Sanity Check') {
+            steps{
+                sh '''
+                    echo 'Getting into the demo-service folder'
+                    cd demo-service
+
+                    echo 'Listing out files inside demo-service folder'
+                    ls -l
+
+                    echo 'Python version info'
+                    python --version || python3 --version
+                '''
+            }
+        }
 
         stage('Sanity Test') {
             steps{
